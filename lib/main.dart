@@ -93,18 +93,18 @@ class MyHomePage extends ConsumerWidget {
       ),
 
       //deprecated provider
-      //  body: firstName.when(
-      //      data: (data) {
-      //        return ListView.builder(
-      //            itemCount: data.length,
-      //            itemBuilder: (context, index) {
-      //              return ListTile(
-      //                title: Text(data.elementAt(index)),
-      //              );
-      //            });
-      //      },
-      //      error: (error, stack) => const Text("No data"),
-      //      loading: () => const Center(child: Text("Loading"))),
+       body: firstName.when(
+           data: (data) {
+             return ListView.builder(
+                 itemCount: data.length,
+                 itemBuilder: (context, index) {
+                   return ListTile(
+                     title: Text(data.elementAt(index)),
+                   );
+                 });
+           },
+           error: (error, stack) => const Text("No data"),
+           loading: () => const Center(child: Text("Loading"))),
 
       // proposed version
       // body: secondName.when(
